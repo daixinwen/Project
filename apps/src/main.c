@@ -1,13 +1,14 @@
 /*
  * @Author: daixinwen
- * @Date: 2020-01-11 01:33:47
- * @LastEditors  : daixinwen
- * @LastEditTime : 2020-01-11 01:51:48
+ * @Date: 2020-01-11 11:50:13
+ * @LastEditors: daixinwen
+ * @LastEditTime: 2020-01-11 11:50:15
+ * @FilePath: /Project/apps/src/main.c
  * @Description: 
+ * @Version: v1.0
  */
 #include <stdio.h>
 #include "sort.h"
-
 
 /**
  * @description: main function

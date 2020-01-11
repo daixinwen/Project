@@ -1,11 +1,11 @@
 /*
- * @Description: 经典排序算法
- * @FilePath: \test\src\sort.c
- * @Version: 1.0
- * @Autor: daixinwen
- * @Date: 2019-12-22 22:21:06
+ * @Author: daixinwen
+ * @Date: 2020-01-11 11:49:28
  * @LastEditors  : daixinwen
- * @LastEditTime : 2020-01-11 01:51:29
+ * @LastEditTime : 2020-01-11 11:49:42
+ * @FilePath: /Project/apps/src/sort.c
+ * @Description: 经典排序算法
+ * @Version: v1.0
  */
 #include <stdio.h>
 
