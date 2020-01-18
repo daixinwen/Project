@@ -1,8 +1,8 @@
 /*
  * @Author: daixinwen
  * @Date: 2020-01-11 11:50:13
- * @LastEditors: daixinwen
- * @LastEditTime: 2020-01-11 11:50:15
+ * @LastEditors  : daixinwen
+ * @LastEditTime : 2020-01-12 16:45:06
  * @FilePath: /Project/apps/src/main.c
  * @Description: 
  * @Version: v1.0
@@ -25,8 +25,9 @@ int main(void)
         printf("%d ", arr[i]);
     printf("\n\n");
 
-    quick_sort(arr, 0, 9);
-    
+    //quick_sort(arr, 0, 9);
+    merge_sort(arr, arr, 0, 9, 10);
+
     printf("after sort:");
     for(i = 0; i < 10; i++)
         printf("%d ", arr[i]);

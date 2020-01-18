@@ -10,9 +10,9 @@ LDFLAGS =
 # Makefile settings - Can be customized.
 APPNAME = myapp
 EXT = .c
-SRCDIR = src
+SRCDIR = ./apps/src
 OBJDIR = obj
-INCDIR = -I src/include
+INCDIR = -I ./apps/include
 ############## Do not change anything from here downwards! #############
 SRC = $(wildcard $(SRCDIR)/*$(EXT))
 OBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)/%.o)

@@ -2,13 +2,13 @@
  * @Author: daixinwen
  * @Date: 2020-01-11 11:49:28
  * @LastEditors  : daixinwen
- * @LastEditTime : 2020-01-11 11:49:42
+ * @LastEditTime : 2020-01-12 16:47:14
  * @FilePath: /Project/apps/src/sort.c
  * @Description: 经典排序算法
  * @Version: v1.0
  */
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * @description: 
  * @param {type} 
@@ -196,5 +196,50 @@ void shell_sort(int* data, int len)
         return ;
 }
 
+void merge(int* src, int* dst, int low, int high, int mid)
+{
+    int i = low;
+    int j = mid + 1;
+    int k = low;
+    while (i <= mid && j <= high)
+    {
+        if (src[i] < src[j])
+        {
+            dst[k++] = src[i++];
+        }
+        else
+        {
+            dst[k++] = src[j++];
+        }
+    }
+    while(i <= mid)
+    {
+        dst[k++] = src[i++];
+    }
+    while(j <= high)
+    {
+        dst[k++] = src[j++];
+    }
+}
 
+void merge_sort(int* src, int* dst, int low, int high, int len)
+{
+    int mid = (low + high) / 2;
+    int* tmpDst = NULL;
+    if(low == high)
+    {
+        dst[low] = src[low];
+    }
+    else
+    {
+        tmpDst = malloc(sizeof(int) * len);
+        if(NULL != tmpDst)
+        {
+            merge_sort(src, tmpDst, low, mid, len);
+            merge_sort(src, tmpDst, mid + 1, high, len);
+            merge(tmpDst, dst, low, high, mid);
+        }
+        free(tmpDst);
+    }
+}
 
