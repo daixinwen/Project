@@ -15,7 +15,7 @@
  * @return: 
  * @author: daixinwen
  */
-void bubb_sort(int* data, int len)
+void bubb_sort(int *data, int len)
 {
     int i = 0;
     int j = 0;
@@ -34,13 +34,14 @@ void bubb_sort(int* data, int len)
     }
     return;
 }
+
 /**
  * @description: 选择排序
  * @param {type} 
  * @return: 
  * @author: daixinwen
  */
-void select_sort(int* data, int len)
+void select_sort(int *data, int len)
 {   
     int i = 0;
     int j = 0;
@@ -196,6 +197,13 @@ void shell_sort(int* data, int len)
         return ;
 }
 
+/**
+ * @description: 合并函数，将一个数组（以mid为中间，左右两个是有序的子数组）重新
+ *               组装成一个有序的数组
+ * @param {type} 
+ * @return: 
+ * @author: daixinwen
+ */
 void merge(int* src, int* dst, int low, int high, int mid)
 {
     int i = low;
@@ -222,6 +230,12 @@ void merge(int* src, int* dst, int low, int high, int mid)
     }
 }
 
+/**
+ * @description: 归并排序 两个思想，分治-合并
+ * @param {type} 
+ * @return: 
+ * @author: daixinwen
+ */
 void merge_sort(int* src, int* dst, int low, int high, int len)
 {
     int mid = (low + high) / 2;
